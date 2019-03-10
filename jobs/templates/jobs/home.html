@@ -1,4 +1,5 @@
 <!doctype html>
+{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -6,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+    <title>Raj Thakur</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -20,20 +20,20 @@
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Raj Thakur</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Raj Thakur</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav  mt-2 mt-lg-0 ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Likedin</a>
+                        <a class="nav-link" href="https://www.linkedin.com/in/amazingrajthakur/">Likedin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="{% static 'RajThakurResume.pdf' %}">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="{%url 'allblogs'%}">Blog</a>
                     </li>
 
                 </ul>
@@ -53,6 +53,7 @@
                 <p>
                     <a href="mailto:rajthakur2003@gmail.com" class="btn btn-primary my-2">Email Me</a>
                 </p>
+                <img src="{% static 'chiko.gif' %}" height=200>
             </div>
         </section>
 
